@@ -11,3 +11,7 @@ Le site doit posséder les éléments suivants :
 ● un formulaire
 ● des éléments UI redondants (CTA, tags, listes...)
 
+questions:
+
+Comment modifier la disposition d'une image
+faire des collone caché ?
