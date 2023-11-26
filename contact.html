@@ -1,29 +1,47 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/resert.css" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" 
-        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="js/script_contact.js" defer>
-        
-    </script>
-    <!-- police 1: des boutons Silkscreen-regular -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+<!--
+    Page d'acceuil de mon porfolio
+-->
+<!-- Extension utilisé :
+    - Better Comments 
+    - vscode-pdf (Afficher mon cv)
+
+    todo : Mettre tous mes projects sur gitub afin de pouvoir faire le lien
+    todo : mettre en forme le carousel 
+    todo : mettre une animation en js sur le titre
+    todo : mettre des animations sur le site
+ -->
+
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="author" content="Kilian Sochard" />
+     <meta name="description" content="Bienvenue sur mon portfolio" />
+     <meta name="copyright" content=" @ copyright | Kilian Sochard |Tous drois réservés" />
+ 
+     <!--importation css dans cet ordre reset, bosstrap, icone boostrap , librarie boostrap et mon css-->
+     <link rel="stylesheet" href="css/resert.css" /> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <link rel="stylesheet" href="css/style.css" />
+ 
+     <!--Police d'écriture -->
+     <!-- police 1: des boutons Silkscreen-regular  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+     
+     <!-- police 2: Les titres Paprika -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Paprika&family=Silkscreen&display=swap" rel="stylesheet">
+     <!-- Police 3 : nico_regular directement intégré par le css-->
     
-    <!-- police 2: Les titres Paprika-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paprika&family=Silkscreen&display=swap" rel="stylesheet">
-    
+        <!--JS de la page contact-->
+    <script src="js/script_contact.js" defer></script>
     <title>Contact</title>
 </head>
 <body>
@@ -83,7 +101,7 @@
                             </span>
                         </h1>
                         <div class="btn_hero">
-                            <button class=" btn btn-primary bouton_header-custom btn_perso">En savoir plus</button>
+                            <a href="#formulaire"><button class=" btn btn-primary bouton_header-custom btn_perso">En savoir plus</button></a>
                         </div>
                     </div>   
                 </div>
@@ -91,7 +109,7 @@
         </section>
     </section>
     <main class="main">
-        <section class="formulaire main_section">
+        <section class="formulaire main_section" id="formulaire">
             <div class="container">
                 <div class="row">
                     <div class="col-3"></div>
@@ -112,18 +130,24 @@
                             <div class="col-2 col-sm-1 col-md-1"></div>
                             <div class="col-8 col-sm-5 col-md-5">
                                 <div class="mb-3">
-                                    <label for="champ_nom" class="form-label label_etat_initial-custom" id="label_nom">Nom *</label>
+                                    <label for="champ_nom" class="form-label label_etat_initial-custom" id="label_nom">Nom_ *</label>
                                     <input type="text" name="nom" class="form-control input_etat_initial-custom" id="champ_nom" aria-describedby="emailHelp" placeholder="" required>
+                                    <div class="nomb_carac nomb_carac_minimum_nom"></div>
+                                    <div class="d-flex justify-content-end nomb_carac_nom"></div>
                                     <div class="error nom-error"></div>
+                                    
                                 </div>
                             </div>
                             <div class="col-2 d-sm-none col-md-0"></div>
                             <div class="col-2 d-sm-none col-md-0"></div>
                             <div class="col-8 col-sm-5 col-md-5">
                                 <div class="mb-3 ">
-                                    <label for="champ_prenom" class="form-label label_etat_initial-custom" id="label_prenom">Prenom *</label>
+                                    <label for="champ_prenom" class="form-label label_etat_initial-custom" id="label_prenom">Prenom_ *</label>
                                     <input type="text" name="prenom" class="form-control input_etat_initial-custom" id="champ_prenom" aria-describedby="emailHelp" placeholder="" required>
+                                    <div class="nomb_carac nomb_carac_minimum_prenom"></div>
+                                    <div class="d-flex justify-content-end nomb_carac_prenom"></div>
                                     <div class="error prenom-error"></div>
+                                    
                                 </div>
                             </div>
                             <div class="col-2 col-sm-1 "></div>
@@ -132,8 +156,10 @@
                             <div class="col-2 col-sm-1 col-md-1"></div>
                             <div class="col-8 col-sm-6 col-md-5">
                                 <div class="mb-3">
-                                    <label for="champ_email" class="form-label label_etat_initial-custom" id="label_email">e-mail *</label>
+                                    <label for="champ_email" class="form-label label_etat_initial-custom" id="label_email">e-mail_ *</label>
                                     <input type="email" name ="email" class="form-control input_etat_initial-custom" id="champ_email" aria-describedby="emailHelp" placeholder="" required>
+                                    <div class="nomb_carac nomb_carac_minimum_email"></div>
+                                    <div class="d-flex justify-content-end nomb_carac_email"></div>
                                     <div class="error email-error"></div>
                                 </div>
                             </div>
@@ -141,9 +167,12 @@
                             <div class="col-2 d-sm-none col-md-0"></div>
                             <div class="col-8 col-sm-4 col-md-5">
                                 <div class="mb-3">
-                                    <label for="champ_tel" class="form-label label_etat_initial-custom" id="label_telephone">telephone</label>
-                                    <input type="tel" name="telephone" class="form-control input_etat_initial-custom" id="champ_tel" aria-describedby="emailHelp" placeholder="">
+                                    <label for="champ_telephone" class="form-label label_etat_initial-custom" id="label_telephone">telephone_</label>
+                                    <input type="tel" name="telephone" class="form-control input_etat_initial-custom" id="champ_telephone" aria-describedby="emailHelp" placeholder="">
+                                    <div class="nomb_carac nomb_carac_minimum_telephone"></div>
+                                    <div class="d-flex justify-content-end nomb_carac_telephone"></div>
                                     <div class="error tel-error"></div>
+                                    
                                 </div>
                             </div>
                             <div class="col-2 col-sm-1"></div>
@@ -151,9 +180,12 @@
                         <div class="row">
                             <div class="d-none d-md-block col-md-1"></div>
                             <div class="col-12 col-sm-8 col-md-7 mb-5 mt-5">
-                                <label for="champ_message" class="form-label label_etat_initial-custom" id="label_message">Message *</label>
+                                <label for="champ_message" class="form-label label_etat_initial-custom" id="label_message">Message_ *</label>
                                 <textarea class="form-control input_etat_initial-custom" id="champ_message" rows="10"></textarea>
+                                <div class="nomb_carac nomb_carac_minimum_message"></div>
+                                <div class="d-flex justify-content-end nomb_carac_message"></div>
                                 <div class="error message-error"></div>
+                                
                             
                         
                                 <p>Les champs marqué d'un astérisque (*) sont obligatoires</p>
@@ -202,8 +234,8 @@
                  <p> @ copyright | Kilian Sochard |Tous drois réservés </p>
              </div>
              <div class="col-3 ">
-                <i class="bi bi-linkedin icon-custom"></i>
-                <i class="bi bi-github icon-custom"></i>
+                <a href="https://fr.linkedin.com/"><i class="bi bi-linkedin icon-custom"></i></a>
+                <a href="https://github.com/Floconi?tab=repositories"><i class="bi bi-github icon-custom"></i></a>
              </div>
          </div>
      </footer>

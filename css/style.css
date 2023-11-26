@@ -1,9 +1,27 @@
+/* Feuille de style css */
+/** 
+* * Extention utilisé :
+* * - Better Comments
+*/
+/** Légende des commentaires :
+ *   Commentaire normale 
+ * * Commentaire séparation de partie (pas réelement des commentaires juste pour ahérer le code)
+ * ? questions
+ * ! important
+ * TODO : A faire
+ * todo : Enlever les !important et régler les pb de priorité
+*/
 
+/** 
+ * ? normalement ce code ne sert pas
 @font-face {
 	font-family: 'monda';
 	font-weight: 400;
 	src: url("../policedécriture/Monda-Regular/monda/Monda-Regular.ttf") format(‘truetype’)
-}
+}*/
+
+
+/** Importation depuis mes fichiers de la police d'écriture nico_mojiregular */
 @font-face {
     font-family: 'nico_mojiregular';
     src: url('../policedécriture/webfontkit-20231116-120723/nicomoji-regular-webfont.woff2') format('woff2'),
@@ -12,6 +30,15 @@
     font-style: normal;
 
 }
+
+/** 
+ * --------------------------------------------
+ ** Page D'acceuil + autre page si similaire
+ * --------------------------------------------
+*/
+
+/** Header */
+
 .header{
     background-color: #3C5B7E;
     opacity: 0.67;
@@ -28,6 +55,25 @@
     flex-direction: row;
    
 }
+.header .nav li a{
+    text-decoration: none;
+    color: #fff;
+    font-family: "monda";
+}
+.header .nav li .page_active{ /* Page active signifie la page sur lequel est le navigateur*/
+    text-decoration: none;
+    color: #FBB734;
+}
+.header i{
+    font-size: 20px;
+    color: #fff;
+}
+.logo{
+    color: blue;
+}
+
+/** bare de Menu */
+
 .menu_cacher{
     background-color: #20584B;
 }
@@ -45,25 +91,16 @@
 .menu_deroulant .page_active{
     color: #FBB734;
 }
-.header .nav li a{
-    text-decoration: none;
-    color: #fff;
-    font-family: "monda";
-}
-.header .nav li .page_active{
-    text-decoration: none;
-    color: #FBB734;
-}
-.header i{
-    font-size: 20px;
-    color: #fff;
-}
+
+
 
 .header_hero{
     background-image: url(../images/images_de_base/Fond_header.png);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+
+/** Hero */
 
 }
 .hero {
@@ -76,6 +113,17 @@
 .hero .row{
     align-items: center;
 }
+
+/* Style généraux */
+
+h1{
+    font-family: 'nico_mojiregular',sans-serif;
+}
+h1 span{
+    font-family: "monda";
+    font-size: 20px;
+}
+
 .titre_h2{
     margin-bottom: 15px;
     font-family: "nico_mojiregular",sans-serif;
@@ -85,30 +133,12 @@
     
 }
 
-h1{
-    font-family: 'nico_mojiregular',sans-serif;
-}
-h1 span{
-    font-family: "monda";
-    font-size: 20px;
-}
+
 .h2_custom{
     background-color: #64D3EB;
     text-align: center;
     
 }
-
-.main {
-    background-image: url();
-}
-.main_section{
-    margin-top: 25px;
-}
-.about{
-    margin-top: 0;
-    padding-top: 25px;
-}
-
 
 .btn_perso{
     margin : 6px solid #64D3EB;
@@ -121,6 +151,51 @@ h1 span{
     align-items: center;
 }
 
+p{
+    padding: 0;
+    margin: 0;
+}
+/** Style Main*/
+
+.main {
+    background-image: url();
+}
+.main{
+    background-image: url(../images/images_de_base/fond_main_.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+.main .main_section{
+    margin-top: 25px;
+}
+
+/** partie about */
+
+.about{
+    margin-top: 0;
+    padding-top: 25px;
+}
+.about .description_generale{
+    font-family: 'monda';
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    color: #FBB734;
+    align-items: center;
+    text-align: justify;
+    
+
+}
+.about img {
+    width: 100px;
+    height: 100px;
+}
+
+.main .about{
+    margin-top: 0px !important;
+}
+/** Partie citation */
 
 .citation{
     background-image: url(../images/images_de_base/image_fond_citation.jpg);
@@ -140,6 +215,13 @@ h1 span{
     
 }
 
+.active {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
+
+}
+/** Partie Project */
 
 .project .card-title{
     font-family: "Paprika";
@@ -161,21 +243,7 @@ h1 span{
 .project i{
     color: #ACFF6B;
 }
-.description{
-    font-family: 'monda';
-    font-size: 12px;
-    display: flex;
-    justify-content: center;
-    color: #FBB734;
-    align-items: center;
-    text-align: justify;
-    
 
-}
-.about img {
-    width: 100px;
-    height: 100px;
-}
 .project .card-custom{
     background-color: #20584B;
     min-height: 300px;
@@ -188,10 +256,15 @@ h1 span{
     border-radius: 20px;
 }
 
-p{
-    padding: 0;
-    margin: 0;
+/** Partie Contact */
+
+.contact{
+    color: #fff;
+    padding-bottom: 50px;
+    text-align: center;
 }
+
+/** Partie footer */
 
 
 .footer{
@@ -210,11 +283,10 @@ p{
 .footer .icon-custom{
     font-size: 30px;
     padding: 10px;
+    color: #FBB734;
 
 }
-.logo{
-    color: blue;
-}
+
 
 .footer img{
 
@@ -222,14 +294,43 @@ p{
     height: 43px;
 }
 
-.contact{
-    color: #fff;
-    padding-bottom: 50px;
-    text-align: center;
+
+
+/**
+ * ------------------------
+ **CONTACT 
+ * ------------------------
+ */
+
+ /* Gestion du nombre de caractère */
+.nomb_carac {
+    position: relative;
+    font-family: "nico_mojiregular"; 
+    font-size: 15px;
+    color : white;
+    display : none ;
+
+}
+/* Pour le js*/
+.longeur_accept{ 
+    color: white;
+}
+.longeur_limit{
+    color : orange;
+}
+.longeur_refuse{
+    color : red;
 }
 
-/* CONTACT */
-
+.message_caractere_minimum{
+    font-family: "monda";
+    font-size: 15px;
+}
+.compter-carac{
+    font-family: "nico_mojiregular";
+    font-size: 15px;
+}
+/* Position des labels */
 .label_etat_initial-custom{
     position: relative;
     z-index : 1;
@@ -250,15 +351,16 @@ p{
     position: static;
 }
 .input_etat_initial-custom{
-  
     z-index: 2;
-
 }
 
+/* Tout les message erreur sont affecter */
 .error{
     margin-top: 10px;
 }
 
+
+/* Menu info sup avec tout mes infos pour me contacter */
 .infosup{
     color :#FBB734;
     font-family: "nico_mojiregular";
@@ -287,10 +389,10 @@ p{
     margin-top: 20px;
 }
 
+/** Mise en forme Formulaire */
 .zone_formulaire{
     background-color: #20584B;
     border-radius: 20px;
-
 }
 .btn_form{
     height: 35px;
@@ -313,7 +415,7 @@ p{
 
 .formulaire{
     padding-bottom: 50px;
-    margin-top: 0;
+    margin-top: 0 !important;
     padding-top: 25px;
   }
 
@@ -324,17 +426,36 @@ p{
     color: #FBB734;
 }
 
-  /* A propos */
 
+  /**
+   *------------------------
+   **A propos
+   *------------------------ 
+   */
+
+   /** Partie Profil */
 .profil{
-    margin-top: 0;
+    margin-top: 0 !important;
     padding-top: 50px;
 }
 .description_custom{
    text-align: justify;
    color: #fff;
 }
+@media (min-width : 768px){
+    .image_profil{
+        width: 75px;
+        height: 75px;
+    }
+    .div_image_profil{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
+}
+
+/**Partie compétences */
 .competences_contenu_custom {
     color: #fff;
 }
@@ -363,7 +484,7 @@ p{
     font-size: 12px;
 }
 
-
+/**Expériences pro */
 
 .exp_pro li {
     list-style: none;
@@ -394,6 +515,7 @@ p{
     padding: 0;
 }
 
+/** Partie centre d'intéret */
 
 .hobies li {
     list-style: square;
@@ -411,26 +533,16 @@ p{
 }
 
 
-.main{
-    background-image: url(../images/images_de_base/fond_main_.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-}   
 
 .exp_pro_et_hobies {
     padding-bottom: 50px;
 }
 @media (min-width : 768px){
-    .image_profil{
-        width: 75px;
-        height: 75px;
-        
-    }
-    .div_image_profil , .hobies{
+    .hobies{
         display: flex;
         justify-content: center;
         align-items: center;
     }
-   
-    
 }
+
+

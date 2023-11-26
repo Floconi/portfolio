@@ -1,27 +1,43 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/resert.css" /> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" 
-        integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" 
-        crossorigin="anonymous" 
-        referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
-    <!-- police 1: des boutons Silkscreen-regular -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
-    
-    <!-- police 2: Les titres Paprika-->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Paprika&family=Silkscreen&display=swap" rel="stylesheet">
-    
+<!--
+    Page d'acceuil de mon porfolio
+-->
+<!-- Extension utilisé :
+    - Better Comments 
+    - vscode-pdf (Afficher mon cv)
+
+    todo : 
+ -->
+
+ <!DOCTYPE html>
+ <html lang="fr">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="author" content="Kilian Sochard" />
+     <meta name="description" content="Bienvenue sur mon portfolio" />
+     <meta name="copyright" content=" @ copyright | Kilian Sochard |Tous drois réservés" />
+ 
+     <!--importation css dans cet ordre reset, bosstrap, icone boostrap , librarie boostrap et mon css-->
+     <link rel="stylesheet" href="css/resert.css" /> 
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css" integrity="sha512-Ez0cGzNzHR1tYAv56860NLspgUGuQw16GiOOp/I2LuTmpSK9xDXlgJz3XN4cnpXWDmkNBKXR/VDMTCnAaEooxA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css" integrity="sha512-oAvZuuYVzkcTc2dH5z1ZJup5OmSQ000qlfRvuoTTiyTBjwX1faoyearj8KdMq0LgsBTHMrRuMek7s+CxF8yE+w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <link rel="stylesheet" href="css/style.css" />
+ 
+     <!--Police d'écriture -->
+     <!-- police 1: des boutons Silkscreen-regular  -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Silkscreen&display=swap" rel="stylesheet">
+     
+     <!-- police 2: Les titres Paprika -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Paprika&family=Silkscreen&display=swap" rel="stylesheet">
+     <!-- Police 3 : nico_regular directement intégré par le css-->
+     
+     <!--JS de la page a-propos-->
     <script src="js/script_a_propos.js" defer></script>
     <title>A propos de moi</title>
 </head>
@@ -83,7 +99,7 @@
                             </span>
                         </h1>
                         <div class="btn_hero">
-                            <button class=" btn btn-primary bouton_header-custom btn_perso">En savoir plus</button>
+                            <a href="#profil"><button class=" btn btn-primary bouton_header-custom btn_perso">En savoir plus</button></a>
                         </div>
                     </div>   
                 </div>
@@ -92,7 +108,7 @@
     </section>
 
     <main class="main">
-        <section class="profil main_section">
+        <section class="profil main_section" id="profil">
             <div class="container">
                 <div class="row">
                     <div class="col-3"></div>
@@ -222,8 +238,8 @@
                             <div class="card-body">
                             <h5 class="card-title">Project memory</h5>
                             <p class="card-text">faire un jeu de memory où  le but est de trouver toutes les paires</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a onclick="alertdev()"><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -233,8 +249,8 @@
                             <div class="card-body">
                             <h5 class="card-title">Project convertisseur</h5>
                             <p class="card-text">Programme qui converti  une somme d'euros en franc ou inversement</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a onclick="alertdev()"><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -244,8 +260,8 @@
                             <div class="card-body">
                             <h5 class="card-title">Project morpion</h5>
                             <p class="card-text">Le but du jeu  est d'aligner 3 symbole dans n'importe quel sens</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a onclick="alertdev()"><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -255,8 +271,8 @@
                             <div class="card-body">
                             <h5 class="card-title">style sous figma</h5>
                             <p class="card-text">Un style guide d'un cv pour une futur intégration</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a onclick="alertdev()" ><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -266,8 +282,8 @@
                             <div class="card-body">
                             <h5 class="card-title">One Page Biographie</h5>
                             <p class="card-text">Création d'une biographie de l'auteur Victor Hugo</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a href="https://github.com/Floconi/biographie_victor_hugo/tree/dev" target="_blank" rel="no-referrer"><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
@@ -277,14 +293,15 @@
                             <div class="card-body">
                             <h5 class="card-title">Projet Scratch</h5>
                             <p class="card-text">Petite histoire de Noël sous scratch ( stop motion)</p>
-                            <a href="#" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
-                            <i class="bi bi-github d-flex justify-content-end pt-3"></i>
+                            <a onclick="alertdev()" class="btn btn-primary btn_perso mt-3">Découvrir le projet</a>
+                            <a onclick="alertdev()"><i class="bi bi-github d-flex justify-content-end pt-3"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        
         <section class="exp_pro_et_hobies d-flex flex-column flex-md-row main_section" >
             <section class="exp_pro main_section">
                 <div class="container">
@@ -373,8 +390,8 @@
                  <p> @ copyright | Kilian Sochard |Tous drois réservés </p>
              </div>
              <div class="col-3 ">
-                <i class="bi bi-linkedin icon-custom"></i>
-                <i class="bi bi-github icon-custom"></i>
+                <a href="https://fr.linkedin.com/"><i class="bi bi-linkedin icon-custom"></i></a>
+                <a href="https://github.com/Floconi?tab=repositories"><i class="bi bi-github icon-custom"></i></a>
              </div>
          </div>
      </footer>

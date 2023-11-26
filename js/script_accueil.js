@@ -21,3 +21,10 @@ function affichermenu(){
 
     }
 }
+/**
+ **Fonction indiquant les mise à jour
+ */
+function alertdev(){
+    alert("Cette fonctionalité sera disponible dans une version futur :)")
+
+}
